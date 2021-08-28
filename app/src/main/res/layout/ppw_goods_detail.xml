@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="350dp"
+    android:layout_gravity="bottom"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/iv_goods_thumbnail"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.2"
+        app:layout_constraintWidth_percent="0.2"
+        android:layout_margin="15dp"
+        android:scaleType="fitXY"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:src="@drawable/ic_goods_image"/>
+
+    <TextView
+        android:id="@+id/tv_goods_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="￥239"
+        android:letterSpacing="0.03"
+        android:textColor="#FF0000"
+        android:textSize="18dp"
+        android:layout_marginLeft="15dp"
+        app:layout_constraintLeft_toRightOf="@id/iv_goods_thumbnail"
+        app:layout_constraintTop_toTopOf="@id/iv_goods_thumbnail"
+        app:layout_constraintBottom_toBottomOf="@id/iv_goods_thumbnail"/>
+
+    <TextView
+        android:id="@+id/tv_goods_choose1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="选择"
+        android:textSize="15dp"
+        android:textColor="@color/black"
+        android:layout_marginTop="10dp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="@id/iv_goods_thumbnail"
+        app:layout_constraintTop_toBottomOf="@id/iv_goods_thumbnail"/>
+    
+    <com.zhy.view.flowlayout.TagFlowLayout
+        android:id="@+id/tfl_goods_choose1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_goods_choose1"
+        app:layout_constraintLeft_toLeftOf="@id/iv_goods_thumbnail"/>
+
+    <TextView
+        android:id="@+id/tv_goods_choose2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="选择"
+        android:textSize="15dp"
+        android:textColor="@color/black"
+        android:layout_marginTop="10dp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="@id/iv_goods_thumbnail"
+        app:layout_constraintTop_toBottomOf="@id/tfl_goods_choose1"/>
+
+    <com.zhy.view.flowlayout.TagFlowLayout
+        android:id="@+id/tfl_goods_choose2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_goods_choose2"
+        app:layout_constraintLeft_toLeftOf="@id/iv_goods_thumbnail"/>
+
+    <TextView
+        android:id="@+id/tv_goods_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="购买数量"
+        android:textSize="15dp"
+        android:textColor="@color/black"
+        android:layout_marginTop="10dp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="@id/iv_goods_thumbnail"
+        app:layout_constraintTop_toBottomOf="@id/tfl_goods_choose2"/>
+
+    <Button
+        android:id="@+id/btn_goods_decrease"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="0.08"
+        app:layout_constraintHeight_percent="0.08"
+        android:gravity="center"
+        app:layout_constraintRight_toLeftOf="@id/tv_goods_amount"
+        app:layout_constraintTop_toBottomOf="@id/tfl_goods_choose2"
+        android:layout_marginTop="15dp"
+        android:text="—"
+        android:background="@drawable/shape_goods_button_normal"/>
+
+    <TextView
+        android:id="@+id/tv_goods_amount"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="0.12"
+        app:layout_constraintHeight_percent="0.08"
+        android:gravity="center"
+        app:layout_constraintRight_toLeftOf="@id/btn_goods_add"
+        app:layout_constraintTop_toTopOf="@id/btn_goods_decrease"
+        app:layout_constraintBottom_toBottomOf="@id/btn_goods_decrease"
+        android:text="1"
+        android:textSize="20dp"
+        android:textColor="@color/black"
+        android:background="@drawable/shape_goods_edittext_normal"/>
+
+    <Button
+        android:id="@+id/btn_goods_add"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="0.08"
+        app:layout_constraintHeight_percent="0.08"
+        android:gravity="center"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="15dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tfl_goods_choose2"
+        android:text="+"
+        android:background="@drawable/shape_goods_button_normal"/>
+
+    <Button
+        android:id="@+id/btn_goods_next"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="下一步"
+        android:letterSpacing="0.05"
+        android:textSize="18dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:background="@drawable/shape_next_button_normal"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

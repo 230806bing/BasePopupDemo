@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="350dp"
+    android:layout_gravity="bottom"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/tv_goods_address_hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="收货地址"
+        android:textSize="15dp"
+        android:layout_margin="15dp"
+        android:layout_marginTop="40dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/tv_goods_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="xxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+        android:textSize="15dp"
+        android:layout_marginLeft="20dp"
+        android:letterSpacing="0.03"
+        android:textColor="@color/black"
+        app:layout_constraintLeft_toRightOf="@id/tv_goods_address_hint"
+        app:layout_constraintTop_toTopOf="@id/tv_goods_address_hint"
+        app:layout_constraintBottom_toBottomOf="@id/tv_goods_address_hint"/>
+
+    <TextView
+        android:id="@+id/tv_goods_content_hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="商品内容"
+        android:textSize="15dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_marginTop="15dp"
+        app:layout_constraintLeft_toLeftOf="@id/tv_goods_address_hint"
+        app:layout_constraintTop_toBottomOf="@id/tv_goods_address_hint"/>
+
+    <TextView
+        android:id="@+id/tv_goods_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="商品名称"
+        android:textSize="15dp"
+        android:letterSpacing="0.03"
+        android:textColor="@color/black"
+        app:layout_constraintLeft_toLeftOf="@id/tv_goods_address"
+        app:layout_constraintTop_toTopOf="@id/tv_goods_content_hint"
+        app:layout_constraintBottom_toBottomOf="@id/tv_goods_content_hint"/>
+
+    <TextView
+        android:id="@+id/tv_goods_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="选择内容/选择分类/购买数量"
+        android:textSize="15dp"
+        android:layout_marginTop="10dp"
+        android:letterSpacing="0.03"
+        android:textColor="@color/black"
+        app:layout_constraintLeft_toLeftOf="@id/tv_goods_address"
+        app:layout_constraintTop_toBottomOf="@id/tv_goods_content_hint"/>
+
+    <TextView
+        android:id="@+id/tv_goods_distribution_hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="配送方式"
+        android:textSize="15dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_marginTop="15dp"
+        app:layout_constraintLeft_toLeftOf="@id/tv_goods_address_hint"
+        app:layout_constraintTop_toBottomOf="@id/tv_goods_content"/>
+
+    <TextView
+        android:id="@+id/tv_goods_distribution"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="快递包邮"
+        android:textSize="15dp"
+        android:letterSpacing="0.03"
+        android:textColor="@color/black"
+        app:layout_constraintLeft_toLeftOf="@id/tv_goods_address"
+        app:layout_constraintTop_toTopOf="@id/tv_goods_distribution_hint"
+        app:layout_constraintBottom_toBottomOf="@id/tv_goods_distribution_hint"/>
+
+    <TextView
+        android:id="@+id/tv_goods_discount_hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="会员优惠"
+        android:textSize="15dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_marginTop="15dp"
+        app:layout_constraintLeft_toLeftOf="@id/tv_goods_distribution_hint"
+        app:layout_constraintTop_toBottomOf="@id/tv_goods_distribution_hint"/>
+
+    <TextView
+        android:id="@+id/tv_goods_discount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-￥5.00"
+        android:textSize="15dp"
+        android:letterSpacing="0.03"
+        android:textColor="@color/black"
+        app:layout_constraintLeft_toLeftOf="@id/tv_goods_address"
+        app:layout_constraintTop_toTopOf="@id/tv_goods_discount_hint"
+        app:layout_constraintBottom_toBottomOf="@id/tv_goods_discount_hint"/>
+
+    <TextView
+        android:id="@+id/tv_goods_coupons_hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="优惠券"
+        android:textSize="15dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_marginTop="15dp"
+        app:layout_constraintLeft_toLeftOf="@id/tv_goods_discount_hint"
+        app:layout_constraintTop_toBottomOf="@id/tv_goods_discount_hint"/>
+
+    <TextView
+        android:id="@+id/tv_goods_coupons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="无可用优惠券"
+        android:textSize="15dp"
+        android:letterSpacing="0.03"
+        android:textColor="@color/black"
+        app:layout_constraintLeft_toLeftOf="@id/tv_goods_address"
+        app:layout_constraintTop_toTopOf="@id/tv_goods_coupons_hint"
+        app:layout_constraintBottom_toBottomOf="@id/tv_goods_coupons_hint"/>
+
+    <TextView
+        android:id="@+id/tv_goods_note_hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="订单备注"
+        android:textSize="15dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_marginTop="15dp"
+        app:layout_constraintLeft_toLeftOf="@id/tv_goods_coupons_hint"
+        app:layout_constraintTop_toBottomOf="@id/tv_goods_coupons_hint"/>
+
+    <TextView
+        android:id="@+id/tv_goods_note"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+        android:textSize="15dp"
+        android:letterSpacing="0.03"
+        android:textColor="@color/black"
+        app:layout_constraintLeft_toLeftOf="@id/tv_goods_address"
+        app:layout_constraintTop_toTopOf="@id/tv_goods_note_hint"
+        app:layout_constraintBottom_toBottomOf="@id/tv_goods_note_hint"/>
+
+    <Button
+        android:id="@+id/btn_goods_pay"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="实付￥234"
+        android:letterSpacing="0.05"
+        android:textSize="18dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:background="@drawable/shape_next_button_normal"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
